@@ -1,25 +1,24 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # taskleaf
+|users||
+|---|---|
+|name|string|
+|email|string|
+|password_digest|string|
+
+|tasks||
+|---|---|
+|user_id|integer|
+|title|string|
+|content|string|
+|status|integer|
+|priority|integer|
+|deadline|datetime|
+
+|labels||
+|---|---|
+|name|string|
+
+|task_labels||
+|---|---|
+|task_id|integer|
+|label_id|integer|
