@@ -1,0 +1,33 @@
+@startuml
+entity "users" {
+    + id [PK]
+    ==
+    - name:string
+    - email:string
+    - password_digest:string
+}
+entity "tasks" {
+    + id [PK]
+    ==
+    + user_id [FK]
+    - title:string
+    - content:string
+    - priority:integer
+    - state:integer
+    - deadline:datetime
+}
+entity "labels" {
+    + id [PK]
+    ==
+    - name:string
+}
+entity "task_labels" {
+    + id [PK]
+    ==
+    + task_id [FK]
+    + label_id [FK]
+}
+users --o{ tasks
+tasks --o{ task_labels
+labels --o{ task_labels
+@enduml
